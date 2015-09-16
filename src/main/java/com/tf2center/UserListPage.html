@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>wicketapp -- User Search</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<form wicket:id="search">
+		<label for"query">Email or username</label> <input type="text"
+			name="query" wicket:id="query" maxlength="20"> <input
+			type="submit" value="Submit">
+	</form>
+	<div>
+		<h1 wicket:id="message"></h1>
+	</div>
+	<table>
+		<thead>
+			<tr>
+				<td>Username <a wicket:id="usernameAsc" href="#">▲</a> <a
+					wicket:id="usernameDesc">▼</a></td>
+				<td>Email <a wicket:id="emailAsc" href="#">▲</a> <a
+					wicket:id="emailDesc">▼</a></td>
+			</tr>
+		</thead>
+		<tbody wicket:id="userList">
+			<tr>
+				<td wicket:id="username"></td>
+				<td wicket:id="email"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

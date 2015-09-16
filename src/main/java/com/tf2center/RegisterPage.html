@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>wicketapp -- Register</title>
+<link
+	href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:regular,bold'
+	rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="style.css" type="text/css" media="screen"
+	title="Stylesheet" />
+</head>
+<body>
+	<div wicket:id="feedback"></div>
+	<form wicket:id="registrationForm">
+		<p>
+			<label for="username">Username</label> <input type="text"
+				name="username" wicket:id="username" maxlength="16" />
+		</p>
+
+		<p>
+			<label for="email">Email</label> <input type="text" name="email"
+				wicket:id="email" maxlength="120" />
+		</p>
+
+		<p>
+			<label for="password">Password</label> <input type="password"
+				name="password" wicket:id="password" maxlength="64" />
+		</p>
+
+		<p>
+			<label for="confirmPassword">Confirm password</label> <input
+				type="password" name="confirmPassword" wicket:id="confirmPassword"
+				maxlength="64" />
+		</p>
+		<input type="submit" value="Register" />
+	</form>
+</body>
+</html>

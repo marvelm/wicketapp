@@ -1,0 +1,106 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+	<context:component-scan base-package="com.tf2center" />
+
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+		<property name="annotatedClasses">
+			<list>
+				<value>
+					com.tf2center.models.User
+				</value>
+			</list>
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.PostgreSQLDialect
+				</prop>
+				<prop key="hibernate.current_session_context_class">
+					thread
+				</prop>
+				<prop key="hibernate.connection.driver_class">
+					org.postgresql.Driver
+				</prop>
+				<prop key="hibernate.connection.url">
+					jdbc:postgresql://localhost:5432/wicketdb
+				</prop>
+				<prop key="hibernate.connection.username">
+					a_
+				</prop>
+				<prop key="hibernate.connection.password">
+				</prop>
+				<prop key="hibernate.hbm2ddl.auto">
+					create
+				</prop>
+				<prop key="show_sql">true</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean id="offlineMode" class="java.lang.Boolean">
+		<constructor-arg value="false" />
+	</bean>
+
+	<bean id="steamApiKey" class="java.lang.String">
+		<constructor-arg value="46D024ADE99DF5D7FE864939F7F22CD1" />
+	</bean>
+
+	<bean id="mockRecentlyPlayedResponse" class="java.lang.String">
+		<constructor-arg>
+			<value>{
+				"response": {
+				"total_count": 4,
+				"games": [
+				{
+				"appid": 363970,
+				"name": "Clicker Heroes",
+				"playtime_2weeks": 2021,
+				"playtime_forever": 6720,
+				"img_icon_url":
+				"155ed2de95eacc3353b91c2a057bdbf727c11c20",
+				"img_logo_url":
+				"2c4d7dad61946f8a81548a21955ccdcf9199364b"
+				},
+				{
+				"appid": 287700,
+				"name": "METAL GEAR SOLID V: THE PHANTOM PAIN",
+				"playtime_2weeks":
+				558,
+				"playtime_forever": 558,
+				"img_icon_url":
+				"7a1737163c96ea641143db45709a4ac444ba8f7b",
+				"img_logo_url":
+				"6af3d5aae37f4d5e6add4f49d5edd58f7bdd420b"
+				},
+				{
+				"appid": 311340,
+				"name": "METAL GEAR SOLID V: GROUND ZEROES",
+				"playtime_2weeks": 79,
+				"playtime_forever": 141,
+				"img_icon_url":
+				"60ea6c7b08077263bac018bcd32435ec858e867c",
+				"img_logo_url":
+				"a1dc6285cba9b17f37c8e1e341a747576f1e121c"
+				},
+				{
+				"appid": 250900,
+				"name": "The Binding of Isaac: Rebirth",
+				"playtime_2weeks": 1,
+				"playtime_forever": 151,
+				"img_icon_url":
+				"16d46c8630499bfc54d20745ac90786a302cd643",
+				"img_logo_url":
+				"c7a76988c53e7f3a3aa1cf224aaf4dbd067ebbf9"
+				}
+				]
+				}
+				}
+			</value>
+		</constructor-arg>
+	</bean>
+</beans>

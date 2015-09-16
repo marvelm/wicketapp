@@ -1,3 +1,7 @@
 .idea
 target
 webapp.iml
+.classpath
+.project
+.settings
+
