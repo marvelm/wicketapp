@@ -11,7 +11,7 @@ The app will destroy all previous tables in the database.
 The 'applicationContext.xml' is loaded from 'src/main/resources/applicationContext.xml'
 
 To use the recently played games feature in offline mode, set the value of
-the bean, `offlineMode`, to `true` in 'applicationContext.xml'.
+the `offlineMode` bean to `true` in 'applicationContext.xml'.
 
 The app will create a demo user on start.
 - username: 'john'
