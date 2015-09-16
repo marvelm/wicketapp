@@ -11,14 +11,14 @@ public class UserPage extends AuthRequiredPage {
 				setResponsePage(LoginPage.class);
 			}
 		};
-		
+
 		Link userListLink = new Link("userList") {
 			@Override
 			public void onClick() {
 				setResponsePage(UserListPage.class);
 			}
 		};
-		
+
 		Link recentGamesLink = new Link("recentGames") {
 			@Override
 			public void onClick() {

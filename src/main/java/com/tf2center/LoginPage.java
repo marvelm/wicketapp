@@ -13,10 +13,10 @@ import org.apache.wicket.request.mapper.parameter.PageParameters;
 public class LoginPage extends WebPage {
 	public LoginPage(final PageParameters params) {
 		super(params);
-		
+
 		// Redirect authenticated users
 		if (AppSession.get().isSignedIn()) {
-			setResponsePage(UserPage.class);
+			this.setResponsePage(UserPage.class);
 			return;
 		}
 

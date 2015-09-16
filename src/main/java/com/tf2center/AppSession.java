@@ -8,9 +8,8 @@ import com.tf2center.models.User;
 import com.tf2center.models.UserDao;
 
 /**
- * Modified Session containing a User object
- * Wicket will use the `authenticate` method to check the user's
- * credentials against the database.
+ * Modified Session containing a User object Wicket will use the `authenticate`
+ * method to check the user's credentials against the database.
  */
 public class AppSession extends AuthenticatedWebSession {
 	private User user;
@@ -28,7 +27,7 @@ public class AppSession extends AuthenticatedWebSession {
 		}
 		return correct;
 	}
-	
+
 	@Override
 	public void signOut() {
 		super.signOut();

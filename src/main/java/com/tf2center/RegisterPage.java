@@ -29,7 +29,8 @@ public class RegisterPage extends WebPage {
 
 		this.add(new FeedbackPanel("feedback"));
 
-		final TextField<String> username = new TextField<String>("username", Model.of(""));
+		final TextField<String> username = new TextField<String>("username",
+				Model.of(""));
 		username.add(new PatternValidator(InputPatterns.USERNAME_PATTERN));
 		username.setRequired(Boolean.TRUE);
 		username.add(new IValidator<String>() {
@@ -61,7 +62,8 @@ public class RegisterPage extends WebPage {
 			}
 		});
 
-		final PasswordTextField password = new PasswordTextField("password", Model.of(""));
+		final PasswordTextField password = new PasswordTextField("password",
+				Model.of(""));
 		password.setRequired(Boolean.TRUE);
 
 		final PasswordTextField confirmPassword = new PasswordTextField("confirmPassword",
